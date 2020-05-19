@@ -5,25 +5,25 @@ const CupomController = require("./controllers/CupomController");
 const ProdutoController = require("./controllers/ProdutoController");
 const ProdutoCategoriaController = require("./controllers/ProdutoCategoriaController");
 
-const routes = express.Router();
+// const routes = express.Router();
 
-routes.get("/", (req, res) => {
-  res.send("Eai");
-});
+module.exports = (app) => {
+  app.get("/", (req, res) => {
+    res.send("Eai");
+  });
 
-routes.get("/users", UserController.index);
-routes.post("/users", UserController.store);
+  app.get("/users", UserController.index);
+  app.post("/users", UserController.store);
 
-routes.post("/categorias", CategoriaController.store);
-routes.get("/categorias", CategoriaController.index);
+  app.post("/categorias", CategoriaController.store);
+  app.get("/categorias", CategoriaController.index);
 
-routes.post("/cupons", CupomController.store);
-routes.get("/cupons", CupomController.index);
+  app.post("/cupons", CupomController.store);
+  app.get("/cupons", CupomController.index);
 
-routes.post("/produtos", ProdutoController.store);
-routes.get("/produtos", ProdutoController.index);
+  app.post("/produtos", ProdutoController.store);
+  app.get("/produtos", ProdutoController.index);
 
-routes.post("/produtocategorias", ProdutoCategoriaController.store);
-routes.get("/produtocategorias", ProdutoCategoriaController.index);
-
-module.exports = routes;
+  app.post("/produtocategorias", ProdutoCategoriaController.store);
+  app.get("/produtocategorias", ProdutoCategoriaController.index);
+};
