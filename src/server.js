@@ -7,6 +7,8 @@ require("./database");
 app.use(express.json());
 app.use(routes);
 
-app.listen(3333, () => {
-  console.log("app is running");
+const PORT = 3333 | process.env.PORT;
+
+app.listen(PORT, () => {
+  console.log(`App is running on port ${PORT}`);
 });

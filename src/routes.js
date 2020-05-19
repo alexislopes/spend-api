@@ -7,6 +7,10 @@ const ProdutoCategoriaController = require("./controllers/ProdutoCategoriaContro
 
 const routes = express.Router();
 
+routes.get("/", (req, res) => {
+  res.send("Eai");
+});
+
 routes.get("/users", UserController.index);
 routes.post("/users", UserController.store);
 
