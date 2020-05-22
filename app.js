@@ -1,12 +1,14 @@
 const express = require("express");
-const app = express();
+const bodyParser = require("body-parser");
 
 require("./database");
 
-app.use(express.json());
-// app.use(routes);
-
 const PORT = 3333 | process.env.PORT;
+const app = express();
+
+app.use(bodyParser.json());
+// app.use(express.json());
+// app.use(routes);
 
 require("./routes")(app);
 
