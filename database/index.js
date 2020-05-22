@@ -1,11 +1,11 @@
 const Sequelize = require("sequelize");
 const dbConfig = require("../config/database");
 
-const User = require("../../models/User");
-const Categoria = require("../../models/Categoria");
-const Cupom = require("../../models/Cupom");
-const Produto = require("../../models/Produto");
-const ProdutoCategoria = require("../../models/ProdutoCategoria");
+const User = require("../models/User");
+const Categoria = require("../models/Categoria");
+const Cupom = require("../models/Cupom");
+const Produto = require("../models/Produto");
+const ProdutoCategoria = require("../models/ProdutoCategoria");
 
 const connection = new Sequelize(dbConfig);
 

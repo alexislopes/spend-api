@@ -1,4 +1,4 @@
-const Categoria = require("../../models/Categoria");
+const Categoria = require("../models/Categoria");
 const { v4: uuidv4 } = require("uuid");
 
 module.exports = {

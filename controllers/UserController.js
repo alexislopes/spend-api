@@ -1,4 +1,4 @@
-const User = require("../../models/User");
+const User = require("../models/User");
 
 module.exports = {
   async store(req, res) {
@@ -14,5 +14,5 @@ module.exports = {
     const users = await User.findAll();
 
     return res.json(users);
-  }
+  },
 };

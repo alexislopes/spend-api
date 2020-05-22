@@ -1,4 +1,4 @@
-const Produto = require("../../models/Produto");
+const Produto = require("../models/Produto");
 const { v4: uuidv4 } = require("uuid");
 
 module.exports = {
@@ -8,8 +8,6 @@ module.exports = {
     produtos.forEach((produto) => {
       produto.id = uuidv4();
     });
-
-    console.log(produtos);
 
     try {
       const prod = await Produto.bulkCreate(produtos);

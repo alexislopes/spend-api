@@ -1,4 +1,4 @@
-const Cupom = require("../../models/Cupom");
+const Cupom = require("../models/Cupom");
 const { v4: uuidv4 } = require("uuid");
 
 module.exports = {
